@@ -16,7 +16,7 @@ $db_handle = mysqli_connect('localhost', 'root', '' );
 $db_found = mysqli_select_db($db_handle, $database);
 //si le BDD existe, faire le traitement
 
-echo "<form action=compte.php method=post>
+echo "<form action=creation_compte_C.php method=post>
         <table border=1>
         <tr>
                 <td>Nom:</td>
