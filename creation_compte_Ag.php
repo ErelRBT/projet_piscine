@@ -30,9 +30,9 @@ if (!empty($nom) && !empty($prenom) && !empty($cv) && !empty($photo) && !empty($
     if (mysqli_num_rows($result) == 0) {
         $sql = "INSERT INTO agent (email_Agent, Prenom_Agent, Nom_Agent, MDP_Agent, CV_Client, Photo_Agent, Specialite_Agent) VALUES ('$email', '$prenom', '$nom', '$mdp', '$cv', '$photo', '$spe')";
         $result = mysqli_query($db_handle, $sql);
-        echo "Client ajouté.";
+        echo "Agent ajouté.";
     } else {
-        echo "Ce client existe déjà.";
+        echo "Cet agent existe déjà.";
     }
 }
 
