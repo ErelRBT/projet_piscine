@@ -26,7 +26,7 @@ $cp = isset($_POST["CP"])? $_POST["CP"] : "";
 $pays = isset($_POST["Pays"])? $_POST["Pays"] : "";
 $tel = isset($_POST["tel"])? $_POST["tel"] : "";
 
-if (!empty($nom) && !empty($prenom) && !empty($adresse) && !empty($ville) && !empty($cp) && !empty($pays) && !empty($tel)) {
+if (!empty($nom) && !empty($prenom) && !empty($adresse) && !empty($ville) && !empty($cp) && !empty($pays) && !empty($tel) && !empty($email) && !empty($mdp)) {
     $sql = "SELECT * FROM client WHERE email_Client='$email' AND Prenom_Client='$prenom' AND Nom_Client='$nom' AND Adresse_Client='$adresse' AND Ville_Client='$ville' AND CP_Client='$cp' AND Pays_Client='$pays' AND Tel_Client='$tel'";
     $result = mysqli_query($db_handle, $sql);
     if (mysqli_num_rows($result) == 0) {

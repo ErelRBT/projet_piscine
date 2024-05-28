@@ -68,7 +68,8 @@ echo "<form action=creation_compte_C.php method=post>
                     <input type=submit name=button1 value=Soumettre>
                 </td>
             </tr>
-        </table>"
+        </table>
+        </form>"
 
 ?>
 </body>

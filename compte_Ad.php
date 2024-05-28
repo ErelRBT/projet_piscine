@@ -22,7 +22,52 @@ $mdp = isset($_POST["MDP"])? $_POST["MDP"] : "";
 $sql = "SELECT * FROM admin WHERE email_Admin = '$email' AND MDP_Admin = '$mdp'";
 $result = mysqli_query($db_handle, $sql);
 if (mysqli_num_rows($result) == 1) {
-    echo "boujour ". $email;
+    echo "<form action=creation_compte_Ag.php method=post>
+        <table border=1>
+        <tr>
+                <td>Nom:</td>
+                <td><input type=text name=nom></td>
+            </tr>
+
+            <tr>
+                <td>Prénom:</td>
+                <td><input type=text name=prenom></td>
+            </tr>
+
+            <tr>
+                <td>Email:</td>
+                <td><input type=text name=email></td>
+            </tr>
+
+            <tr>
+                <td>Mot de passe:</td>
+                <td><input type=password name=MDP></td>
+            </tr>
+            
+            <tr>
+                <td>CV:</td>
+                <td><input type=texte name=cv></td>
+            </tr>
+            
+            <tr>
+                <td>Photo:</td>
+                <td><input type=texte name=photo></td>
+            </tr>
+            
+            <tr>
+                <td>Spécialité de l'agent:</td>
+                <td><input type=texte name=spe></td>
+            </tr>
+
+            <tr>
+                <td colspan=2 align=center>
+                    <input type=submit name=button1 value=Soumettre>
+                </td>
+            </tr>
+        </table>
+        </form>";
+    echo "Ajouter propriété ". $email;
+    echo "Supprimer propriété". $email;
 }else{
     echo "Compte non existant";
 }
