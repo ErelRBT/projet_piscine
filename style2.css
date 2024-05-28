@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #003300;
+}
+
+h2 {
+    background-color: #ffffcc;
+    color: #003366;
+}
+
+h3 {
+    background-color: #ffffcc;
+    color: #006600;
+}
+
+dd {
+    font-style: normal;
+    font-size: .90em;
+    line-height: 200%;
+}
+
+#wrapper {
+    margin: auto;
+    background-color: #808080;
+    color: #003300;
+    padding: 20px;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#header, #nav, #footer, #section {
+    flex-shrink: 0;
+    width: 100%;
+}
+
+#header {
+    margin: auto;
+    background-color: #A9A9A9;
+    color: #003300;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav {
+    margin: auto;
+    background-color: #ffffcc;
+    color: #003300;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+#section {
+    display: flex;
+    flex-grow: 1;
+    font-size: .60em;
+    font-style: normal;
+    background-color: #fffffffd;
+    color: #003300;
+    margin: auto;
+    padding: 20px;
+}
+
+#footer {
+    font-size: .60em;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    background-color: #DCDCDC;
+    color: #003300;
+    padding: 20px;
+}
+
+#leftcolumn {
+    width: 25%;
+    background-color: #ffffcc;
+    margin-right: 20px;
+    box-sizing: border-box;
+}
+
+#rightcolumn {
+    width: 75%;
+    padding: 20px;
+    background-color: #ffffcc;
+    box-sizing: border-box;
+}
+
+.property-section {
+    margin-bottom: 20px;
+}
+
+.property-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.property-container div {
+    flex: 1 1 calc(25% - 10px); /* Prend 25% de la largeur moins l'espacement */
+    box-sizing: border-box;
+}
+
+.property-container img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.carrousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carrousel .images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrousel .images img {
+    width: 185px;
+    height: 145px;
+    margin-right: 10px;
+}
+
+#buttons {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#buttons button {
+    margin: 0 5px;
+}
