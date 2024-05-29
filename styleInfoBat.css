@@ -14,7 +14,7 @@ h3 {
 }
 
 dd {
-    font-style: normal;
+    font-style: italic;
     font-size: .90em;
     line-height: 200%;
 }
@@ -47,7 +47,7 @@ dd {
 
 #nav {
     margin: auto;
-    background-color: #ffffcc;
+    background-color: #C0C0C0;
     color: #003300;
     display: flex;
     justify-content: center;
@@ -58,8 +58,8 @@ dd {
     display: flex;
     flex-grow: 1;
     font-size: .60em;
-    font-style: normal;
-    background-color: #fffffffd;
+    font-style: italic;
+    background-color: #D3D3D3;
     color: #003300;
     margin: auto;
     padding: 20px;
@@ -77,15 +77,16 @@ dd {
 
 #leftcolumn {
     width: 25%;
-    background-color: #ffffcc;
+    background-color: aliceblue;
     margin-right: 20px;
     box-sizing: border-box;
+    padding: 20px;
 }
 
 #rightcolumn {
     width: 75%;
     padding: 20px;
-    background-color: #ffffcc;
+    background-color: aliceblue;
     box-sizing: border-box;
 }
 
@@ -93,45 +94,44 @@ dd {
     margin-bottom: 20px;
 }
 
-.property-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.property-container div {
-    flex: 1 1 calc(25% - 10px); /* Prend 25% de la largeur moins l'espacement */
-    box-sizing: border-box;
-}
-
-.property-container img {
-    width: 100%;
-    height: auto;
-    cursor: pointer;
-}
-
 .carrousel {
     position: relative;
     width: 100%;
-    overflow: hidden;
-}
-
-.carrousel .images {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.carrousel .images img {
-    width: 185px;
-    height: 145px;
-    margin-right: 10px;
-}
-
-#buttons {
-    margin-top: 10px;
     text-align: center;
 }
 
+.carrousel .images {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrousel .images img {
+    display: none;
+    width: 280px;
+    height: 220px;
+    margin: auto;
+}
+
+.carrousel .images img.active {
+    display: block;
+}
+
+#buttons {
+    position: relative;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    margin-top: -200px; 
+    justify-content: center;
+    gap: 300px;
+}
+
 #buttons button {
-    margin: 0 5px;
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: #000;
 }
