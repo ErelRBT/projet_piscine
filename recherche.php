@@ -21,9 +21,9 @@ $recherche = isset($_POST["recherche"])? $_POST["recherche"] : "";
 $sql = "SELECT * FROM agent WHERE ID_Agent LIKE '%$recherche%' OR email_Agent LIKE '%$recherche%' OR Prenom_Agent LIKE '%$recherche%' OR Nom_Agent LIKE '%$recherche%' OR CV_Agent LIKE '%$recherche%' OR Photo_Agent LIKE '%$recherche%' OR Specialite_Agent LIKE '%$recherche%'";
 
 $result = mysqli_query($db_handle, $sql);
-
+echo "<h2>Résultats de la recherche :</h2>";
 if ($result && mysqli_num_rows($result) > 0) {
-    echo "<h2>Résultats de la recherche :</h2>";
+    echo "<h2>Agents :</h2>";
     echo "<table border='1'>";
     echo "<tr><th>ID</th><th>Email</th><th>Prénom</th><th>Nom</th><th>CV</th><th>Photo</th><th>Spécialité</th></tr>";
     while ($row = mysqli_fetch_assoc($result)) {
@@ -37,11 +37,14 @@ if ($result && mysqli_num_rows($result) > 0) {
         echo "<td>" . $row['Specialite_Agent'] . "</td>";
     }
 }
+echo "</table>";
 $sql = "SELECT * FROM admin WHERE ID_Admin LIKE '%$recherche%' OR email_Admin LIKE '%$recherche%' OR Prenom_Admin LIKE '%$recherche%' OR Nom_Admin LIKE '%$recherche%' OR CV_Admin LIKE '%$recherche%' OR Photo_Admin LIKE '%$recherche%' OR Specialite_Admin LIKE '%$recherche%'";
 
 $result = mysqli_query($db_handle, $sql);
 
 if ($result && mysqli_num_rows($result) > 0) {
+    echo "<h2>Admins :</h2>";
+    echo "<table border='1'>";
     echo "<tr><th>ID</th><th>Email</th><th>Prénom</th><th>Nom</th><th>CV</th><th>Photo</th><th>Spécialité</th></tr>";
     while ($row = mysqli_fetch_assoc($result)) {
         echo "<td>" . $row['ID_Admin'] . "</td>";
@@ -54,12 +57,14 @@ if ($result && mysqli_num_rows($result) > 0) {
         echo "</tr>";
     }
 }
-
+echo "</table>";
 $sql = "SELECT * FROM propriete WHERE ID_Propriete LIKE '%$recherche%' OR Adresse_Propriete LIKE '%$recherche%' OR Ville_Propriete LIKE '%$recherche%' OR CP_Propriete LIKE '%$recherche%' OR Pays_Propriete LIKE '%$recherche%' OR Description_Propriete LIKE '%$recherche%' OR Types_Propriete LIKE '%$recherche%' OR Prix_Propriete LIKE '%$recherche%' OR Prix_Propriete LIKE '%$recherche%' OR Chambre_Propriete LIKE '%$recherche%' OR SDB_Propriete LIKE '%$recherche%' OR Taille_Propriete LIKE '%$recherche%' OR Pieces_Propriete LIKE '%$recherche%' OR Etage_Propriete LIKE '%$recherche%' OR Balcon_Propriete LIKE '%$recherche%' OR Parking_Propriete LIKE '%$recherche%'";
 
 $result = mysqli_query($db_handle, $sql);
 
 if ($result && mysqli_num_rows($result) > 0) {
+    echo "<h2>Propriétés :</h2>";
+    echo "<table border='1'>";
     echo "<tr><th>ID</th><th>Photo</th><th>Adresse</th><th>Ville</th><th>Pays</th><th>Types</th><th>Prix</th></tr>";
     while ($row = mysqli_fetch_assoc($result)) {
         $sql_photo = "SELECT Prop_photo FROM prop_photo WHERE ID_Propriete='".$row['ID_Propriete']."' LIMIT 1";
