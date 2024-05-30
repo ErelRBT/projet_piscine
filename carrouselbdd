@@ -1,0 +1,92 @@
+<?php
+// Connexion à la base de données
+$user = 'root';
+$password = 'root';
+$db = 'projet_piscine';
+$host = 'localhost';
+$port = 8889;
+
+$link = mysqli_init();
+$success = mysqli_real_connect(
+   $link,
+   $host,
+   $user,
+   $password,
+   $db,
+   $port
+);
+
+if (!$success) {
+    die("Échec de la connexion à la base de données : " . mysqli_connect_error());
+}
+
+// Récupération de trois images aléatoires dans la base de données
+$query = "SELECT photo_url FROM photos ORDER BY RAND() LIMIT 3";
+$result = mysqli_query($link, $query);
+if ($result) {
+    $images = mysqli_fetch_all($result, MYSQLI_ASSOC); // Récupérer toutes les lignes de résultat
+} else {
+    die("Échec de l'accès à la table 'photos' : " . mysqli_error($link));
+}
+
+// Fermeture de la connexion
+mysqli_close($link);
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrousel d'Images Simple</title>
+    <style>
+        .carousel {
+            width: 50%; /* Taille du carrousel réduite à 50% de la largeur du conteneur */
+            margin: auto; /* Centrer le carrousel horizontalement */
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center; /* Centrer les images verticalement */
+        }
+        .carousel img {
+            width: 100%;
+            display: none;
+            transition: opacity 1s ease-in-out;
+        }
+        .carousel img.active {
+            display: block;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel">
+        <?php foreach ($images as $index => $img): ?>
+            <img src="<?= $img['photo_url'] ?>" class="<?= $index === 0 ? 'active' : '' ?>" alt="Image aléatoire">
+        <?php endforeach; ?>
+    </div>
+
+    <script>
+        let current = 0;
+        const images = document.querySelectorAll('.carousel img');
+        const totalImages = images.length;
+
+        const updateImage = () => {
+            images.forEach(img => img.style.opacity = '0');
+            images[current].style.opacity = '1';
+        };
+
+        const nextImage = () => {
+            images[current].classList.remove('active');
+            current = (current + 1) % totalImages;
+            images[current].classList.add('active');
+            updateImage();
+        };
+
+        setInterval(nextImage, 3000); // Change image every 3 seconds
+
+        // Initial display update for the first image
+        updateImage();
+    </script>
+</body>
+</html>

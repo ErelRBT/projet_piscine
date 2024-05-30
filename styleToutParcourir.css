@@ -77,7 +77,7 @@ dd {
 
 #leftcolumn {
     width: 25%;
-    background-color: #ffffcc;
+    background-color: aliceblue;
     margin-right: 20px;
     box-sizing: border-box;
 }
@@ -85,7 +85,7 @@ dd {
 #rightcolumn {
     width: 75%;
     padding: 20px;
-    background-color: #ffffcc;
+    background-color: aliceblue;
     box-sizing: border-box;
 }
 
@@ -134,4 +134,24 @@ dd {
 
 #buttons button {
     margin: 0 5px;
+}
+
+.rounded-button {
+    margin-left: 40px;
+    margin-top: 25px;
+    height: 50px;
+    width: 200px;
+    background-color: rgb(89, 125, 152);
+    color: white;
+    border: none;
+    border-radius: 10px; 
+    font-size: 16px; 
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.rounded-button:hover {
+    background-color: rgb(53, 75, 91); 
 }
