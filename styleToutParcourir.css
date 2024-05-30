@@ -1,157 +1,117 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #003300;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-h2 {
-    background-color: #ffffcc;
-    color: #003366;
+.navbar {
+    background:#6ab446;
 }
 
-h3 {
-    background-color: #ffffcc;
-    color: #006600;
-}
-
-dd {
-    font-style: normal;
-    font-size: .90em;
-    line-height: 200%;
-}
-
-#wrapper {
-    margin: auto;
-    background-color: #808080;
-    color: #003300;
-    padding: 20px;
-    min-height: 100vh;
+.page-header {
+    position: relative;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-#header, #nav, #footer, #section {
-    flex-shrink: 0;
-    width: 100%;
-}
-
-#header {
-    margin: auto;
+    min-height: 100vh; 
+    background-size: cover;
     background-color: #A9A9A9;
-    color: #003300;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: white;
 }
 
-#nav {
-    margin: auto;
-    background-color: #ffffcc;
-    color: #003300;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
+.page-header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #A9A9A9;
 }
 
-#section {
-    display: flex;
-    flex-grow: 1;
-    font-size: .60em;
-    font-style: normal;
-    background-color: #fffffffd;
-    color: #003300;
-    margin: auto;
-    padding: 20px;
+.page-header .description {
+    position: relative;
+    padding-top: 50px;
+    text-align: center;
 }
 
-#footer {
-    font-size: .60em;
-    font-style: italic;
-    display: flex;
-    justify-content: center;
-    background-color: #DCDCDC;
-    color: #003300;
-    padding: 20px;
+.page-header .description h2 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 30px;
 }
 
-#leftcolumn {
-    width: 25%;
-    background-color: aliceblue;
-    margin-right: 20px;
-    box-sizing: border-box;
-}
-
-#rightcolumn {
-    width: 75%;
-    padding: 20px;
-    background-color: aliceblue;
-    box-sizing: border-box;
+.page-header .description h3 {
+    font-size: 1.5em;
+    margin: 20px 0;
 }
 
 .property-section {
-    margin-bottom: 20px;
-}
-
-.property-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.property-container div {
-    flex: 1 1 calc(25% - 10px); /* Prend 25% de la largeur moins l'espacement */
-    box-sizing: border-box;
-}
-
-.property-container img {
-    width: 100%;
-    height: auto;
-    cursor: pointer;
+    margin-bottom: 30px;
 }
 
 .carrousel {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .carrousel .images {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    overflow: hidden;
+    width: 80%;
+    
+    justify-content: center;
 }
 
 .carrousel .images img {
-    width: 185px;
-    height: 145px;
+    width: 208px; 
+    height: 139px; 
+    object-fit: cover; 
+    margin: 5px;
+}
+
+.carrousel #buttons {
+    margin-top: 10px;
+}
+
+.carrousel button {
+    background-color: #6ab446;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.carrousel button.prev {
     margin-right: 10px;
 }
 
-#buttons {
-    margin-top: 10px;
-    text-align: center;
+.navbar {
+    background-color: #6ab446;
+    padding: 15px;
 }
 
-#buttons button {
-    margin: 0 5px;
-}
-
-.rounded-button {
-    margin-left: 40px;
-    margin-top: 25px;
-    height: 50px;
-    width: 200px;
-    background-color: rgb(89, 125, 152);
+.navbar .navbar-brand {
     color: white;
-    border: none;
-    border-radius: 10px; 
-    font-size: 16px; 
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
 }
 
-.rounded-button:hover {
-    background-color: rgb(53, 75, 91); 
+.navbar .navbar-toggler {
+    border: none;
 }
+
+.navbar .navbar-nav .nav-item .nav-link {
+    color: white;
+    margin-right: 15px;
+}
+
+.navbar .form-inline .input-group {
+    width: 250px;
+}
+
+.navbar .form-inline .input-group .form-control {
+    border: none;
+    border-radius: 0;
+}
+
+.navbar .form-inline .input-group .btn {
+    border-radius: 0;
+}
+
