@@ -1,4 +1,5 @@
 <?php
+session_start();
 // identifier le nom de base de données
 $database = "projet_piscine";
 

@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -33,6 +33,10 @@ if (!empty($nom) && !empty($prenom) && !empty($adresse) && !empty($ville) && !em
         $sql = "INSERT INTO client (email_Client, Prenom_Client, Nom_Client, MDP_Client, Adresse_Client, Ville_Client, CP_Client, Pays_Client, Tel_Client) VALUES ('$email', '$prenom', '$nom', '$mdp', '$adresse', '$ville', '$cp', '$pays', '$tel')";
         $result = mysqli_query($db_handle, $sql);
         echo "Client ajouté.";
+        
+        // Redirection vers une autre page une fois le traitement terminé
+        header("Location: autre_page.php");
+        exit;
     } else {
         echo "Ce client existe déjà.";
     }

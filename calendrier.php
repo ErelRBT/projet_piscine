@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Récuperation des variables passées, on donne soit année; mois; année+mois
 if(!isset($_GET['mois'])) $num_mois = date("n"); else $num_mois = $_GET['mois'];
 if(!isset($_GET['annee'])) $num_an = date("Y"); else $num_an = $_GET['annee'];

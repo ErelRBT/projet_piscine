@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -22,9 +22,27 @@ $mdp = isset($_POST["MDP"])? $_POST["MDP"] : "";
 $sql = "SELECT * FROM client WHERE email_Client = '$email' AND MDP_Client = '$mdp'";
 $result = mysqli_query($db_handle, $sql);
 if (mysqli_num_rows($result) == 1) {
-    echo "boujour". $email;
+    // Si les informations d'identification sont correctes, récupérez l'ID du client
+    $row = mysqli_fetch_assoc($result);
+    $id_client = $row['ID_Client'];
+
+    echo "Bonjour ".$email.", votre ID est : ".$id_client;
+    
+    
+
 }else{
     echo "Compte non existant";
 }
 ?>
+<form action=recherche.php method=post>
+    <table border=1>
+        <tr>
+            <td>Recherche:</td>
+            <td><input type=text name=recherche></td>
+        </tr>
+            <td colspan=2 align=center>
+                <input type=submit name=button1 value=Rechercher>
+            </td>
+        </tr>
+    </table>
 </body>
