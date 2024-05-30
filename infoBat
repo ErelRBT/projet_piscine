@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Accueil</title>
+    <link href="styleMaison.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        function initCarrousel(carrouselId) {
+            var $carrousel = $('#' + carrouselId);
+            var $images = $carrousel.find('.images img');
+            var currentIndex = 0;
+            var totalImages = $images.length;
+
+            function updateVisibility() {
+                $images.removeClass('active').hide();
+                $images.eq(currentIndex).addClass('active').fadeIn();
+            }
+
+            function nextImage() {
+                currentIndex = (currentIndex + 1) % totalImages;
+                updateVisibility();
+            }
+
+            function prevImage() {
+                currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+                updateVisibility();
+            }
+
+            $carrousel.find('.prev').click(prevImage);
+            $carrousel.find('.next').click(nextImage);
+
+            updateVisibility();
+        }
+
+        initCarrousel('carrousel1');
+        initCarrousel('carrousel2');
+        initCarrousel('carrousel3');
+        initCarrousel('carrousel4');
+        initCarrousel('carrousel5');
+        initCarrousel('carrousel6');
+        initCarrousel('carrousel7');
+        initCarrousel('carrousel8');
+        initCarrousel('carrousel9');
+        initCarrousel('carrousel10');
+        initCarrousel('carrousel11');
+        initCarrousel('carrousel12');
+        initCarrousel('carrousel13');
+        initCarrousel('carrousel14');
+        initCarrousel('carrousel15');
+        initCarrousel('carrousel16');
+        initCarrousel('carrousel17');
+        initCarrousel('carrousel18');
+        initCarrousel('carrousel19');
+        initCarrousel('carrousel20');
+      });
+    </script>
+</head>
+<body>
+
+<div id="wrapper">
+    <div id="header">
+        <img src="logoOmnes.jpg" alt="logo" height="100" width="750">
+    </div>
+
+    <div id="nav">
+        <div class="col-sm-2">
+            <a href="listings.html">
+                <img src="primelistingsnav.gif" alt="image_listings" height="25" width="107">
+            </a>
+        </div>
+        <div class="col-sm-2">
+            <a href="financing.html">
+                <img src="primefinancingnav.gif" alt="image_financing" height="25" width="107">
+            </a>
+        </div>
+        <div class="col-sm-2">
+            <a href="contact.html">
+                <img src="primecontactnav.gif" alt="image_contact" height="25" width="107">
+            </a>
+        </div>
+    </div>
+
+    <div id="section">
+        <div id="leftcolumn">
+            <h5>Prenez RDV avec l'un des agents ci-dessous :</h5>
+            <br>
+            <ul>
+                <a href="agent.html"><li>Monsieur Gérard Depardieu</li></a>
+                <br>
+                <a href="agent.html"><li>Madame Alice Lebrun</li></a>
+                <br>
+                <a href="agent.html"><li>Monsieur Cristophe Perier</li></a>
+            </ul>
+        </div>
+
+        <div id="rightcolumn">
+            <div class="property-section">
+                <h4>Tout savoir sur ce bien :</h4>
+                <br>
+                <div id="carrousel1" class="carrousel">
+                    <div class="images">
+                        <img src="maisonResidentielle.jpg" alt="Image 1" class="active">
+                        <img src="maisonResidentielle2.jpg" alt="Image 2">
+                        <img src="maisonResidentielle3.jpg" alt="Image 3">
+                        <img src="maisonResidentielle4.jpg" alt="Image 4">
+                    </div>
+                    <div id="buttons" align="center">
+                        <button class="prev">Précédent</button>
+                        <button class="next">Suivant</button>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <ul>
+                <li>Numéro : </li>
+                <br>
+                <li>Nombre de pièces : </li>
+                <br>
+                <li>Nombre de chambres : </li>
+                <br>
+                <li>dimensions : </li>
+                <br>
+                <li>Adresse : </li>
+            </ul>
+            <br>
+        </div>
+    </div>
+
+    <div id="footer">
+        <p>&copy; 2024 Omnes Immobilier. Tous droits réservés.</p>
+    </div>
+</div>
+
+</body>
+</html>
