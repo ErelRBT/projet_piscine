@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Accueil</title>
+    <link href="styleMaison.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+     
+    </script>
+</head>
+<body>
+
+<div id="wrapper">
+    <div id="header">
+        <img src="logoOmnes.jpg" alt="logo" height="100" width="650">
+    </div>
+
+    <div id="nav">
+        <div class="col-sm-2">
+            <a href="listings.html">
+                <img src="primelistingsnav.gif" alt="image_listings" height="25" width="107">
+            </a>
+        </div>
+        <div class="col-sm-2">
+            <a href="financing.html">
+                <img src="primefinancingnav.gif" alt="image_financing" height="25" width="107">
+            </a>
+        </div>
+        <div class="col-sm-2">
+            <a href="contact.html">
+                <img src="primecontactnav.gif" alt="image_contact" height="25" width="107">
+            </a>
+        </div>
+    </div>
+
+    <div id="section">
+        <div id="leftcolumn">
+            <a href="creneaux.html"><button class="rounded-button">Prendre un RDV</button></a>
+            <button class="rounded-button">Voir CV</button>
+            <button class="rounded-button">Contacter l'agent</button>
+        </div>
+
+        <div id="rightcolumn">
+
+            <div class="property-section">
+                
+            </div>
+            <ul>
+                <li>Numéro : </li>
+                <li>Nombre de pièces : </li>
+                <li>Nombre de chambres : </li>
+                <li>dimensions : </li>
+                <li>Adresse : </li>
+            </ul>
+            <br>
+            
+        </div>
+
+        
+    </div>
+
+    <div id="footer">
+        <p>&copy; 2024 Omnes Immobilier. Tous droits réservés.</p>
+    </div>
+</div>
+
+</body>
+</html>
