@@ -21,6 +21,7 @@ $photo = isset($_POST["photo"])? $_POST["photo"] : "";
 $ID_prop =$email = isset($_SESSION['ID_prop']) ? $_SESSION['ID_prop'] : '';
 if (!empty($photo)) {
     $sql = "INSERT INTO propriete (ID_Propriete, Prop_photo) VALUES ('$ID_prop', '$photo')";
+    echo $ID_prop . $photo;
 }
 
 echo "<form action=ajouter_prop_photo.php method=post>

@@ -87,7 +87,7 @@ if (mysqli_num_rows($result) == 1) {
 
             <tr>
                 <td>Pays:</td>
-                <td><input type=password name=pays></td>
+                <td><input type=text name=pays></td>
             </tr>
             
             <tr>

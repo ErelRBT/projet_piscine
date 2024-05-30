@@ -25,10 +25,10 @@ $photo = isset($_POST["photo"])? $_POST["photo"] : "";
 $spe = isset($_POST["spe"])? $_POST["spe"] : "";
 
 if (!empty($nom) && !empty($prenom) && !empty($cv) && !empty($photo) && !empty($spe) && !empty($mdp) && !empty($email)) {
-    $sql = "SELECT * FROM agent WHERE email_Agent='$email' AND Prenom_Agent='$prenom' AND Nom_Agent='$nom'AND CV_Client='$cv' AND Photo_Agent='$photo' AND Specialite_Agent='$spe'";
+    $sql = "SELECT * FROM agent WHERE email_Agent='$email' AND Prenom_Agent='$prenom' AND Nom_Agent='$nom'AND CV_Agent='$cv' AND Photo_Agent='$photo' AND Specialite_Agent='$spe'";
     $result = mysqli_query($db_handle, $sql);
     if (mysqli_num_rows($result) == 0) {
-        $sql = "INSERT INTO agent (email_Agent, Prenom_Agent, Nom_Agent, MDP_Agent, CV_Client, Photo_Agent, Specialite_Agent) VALUES ('$email', '$prenom', '$nom', '$mdp', '$cv', '$photo', '$spe')";
+        $sql = "INSERT INTO agent (email_Agent, Prenom_Agent, Nom_Agent, MDP_Agent, CV_Agent, Photo_Agent, Specialite_Agent) VALUES ('$email', '$prenom', '$nom', '$mdp', '$cv', '$photo', '$spe')";
         $result = mysqli_query($db_handle, $sql);
         echo "Agent ajouté.";
     } else {
