@@ -4,6 +4,13 @@ body {
     padding: 0;
 }
 
+
+.features-wrapper {
+    background-color: #000000;
+    padding: 4em 0;
+    text-align: center;
+}
+
 .navbar {
     background:#6ab446;
 }
@@ -84,6 +91,56 @@ body {
     margin-right: 10px;
 }
 
+
+.page-footer {
+    background-color: #222;
+    color: #ccc;
+    padding: 60px 0 30px;
+    text-align: center;
+}
+
+.footer-copyright {
+    color: #666;
+    padding: 40px 0;
+}
+
+@media (max-width: 575.98px) {
+    .description {
+        left: 0;
+        padding: 0 15px;
+        position: absolute;
+        top: 10%;
+        transform: none;
+        text-align: center;
+    }
+
+    .description h1 {
+        font-size: 2em;
+    }
+
+    .description p {
+        font-size: 1.2rem;
+    }
+
+    .features {
+        margin: 0;
+    }
+}
+
+/* Carte Google Maps */
+.map-container {
+    width: 100%;
+    height: 200px; /* Réduisez la hauteur selon vos besoins */
+    margin-top: 20px; /* Espace au-dessus de la carte */
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
 .navbar {
     background-color: #6ab446;
     padding: 15px;
@@ -114,4 +171,3 @@ body {
 .navbar .form-inline .input-group .btn {
     border-radius: 0;
 }
-
