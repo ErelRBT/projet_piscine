@@ -1,171 +1,139 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #003300;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-h2 {
-    background-color: #cce8ff;
-    color: #003366;
-}
-
-h3 {
-    background-color: #cce8ff;
-    color: #006600;
-}
-
-dd {
-    font-style: italic;
-    font-size: .90em;
-    line-height: 200%;
-}
-
-#wrapper {
-    margin: auto;
-    background-color: aliceblue;
-    color: #003300;
-    padding: 10px;
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-#header, #nav, #footer, #section {
-    flex-shrink: 0;
-    width: 100%;
-}
-
-#header {
-    margin: auto;
-    background-color: white;
-    color: #003300;
-    padding: 1px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#header img {
-    height: 100px;
-    max-width: 100%; 
-    height: auto; 
-    margin-left: 200px; 
-}
-
-#nav {
-    margin: auto;
-    background-color: #cce8ff;
-    color: #003300;
-    display: flex;
-    justify-content: center;
-    padding: 5px;
-}
-
-#section {
-    display: flex;
-    flex-grow: 1;
-    font-size: .60em;
-    font-style: italic;
-    background-color: white;
-    color: #003300;
-    margin: auto;
-    padding: 5px;
-}
-
-#footer {
-    font-size: .60em;
-    font-style: italic;
-    display: flex;
-    justify-content: center;
-    background-color: #DCDCDC;
-    color: #003300;
-    padding: 20px;
-}
-
-#leftcolumn {
-    width: 25%;
-    background-color: aliceblue;
-    margin-right: 5px;
-    box-sizing: border-box;
-    padding: 5px;
-}
-
-#rightcolumn {
-    width: 75%;
-    padding: 10px;
-    background-color: aliceblue;
-    box-sizing: border-box;
-}
-
-.property-section {
-    margin-bottom: 10px;
-}
-
-.carrousel {
-    position: relative;
-    width: 100%;
+.features-wrapper {
+    background-color: #000000;
+    padding: 4em 0;
     text-align: center;
 }
 
-.carrousel .images {
+.navbar-nav .nav-link {
+    color: white; /* Couleur du texte blanc */
+}
+
+.navbar {
+    background-color: #6ab446;
+    padding: 15px;
+}
+
+.page-header {
     position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    background-color: #A9A9A9;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.page-header .description {
+    position: relative;
+    padding-top: 50px;
+    text-align: center;
+}
+
+.page-header .description h2 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.page-header .description h3 {
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+
+.property-section {
+    margin-bottom: 30px;
     display: flex;
-    justify-content: center;
+    align-items: center; /* Align vertically with the center */
+    margin-left: 120px;
+}
+
+.carrousel {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+}
+
+.carrousel .images {
+    display: flex;
+    overflow: hidden;
+    width: 80%;
+    justify-content: center;
 }
 
 .carrousel .images img {
-    display: none;
-    width: 280px;
-    height: 220px;
-    margin: auto;
+    width: 416px;
+    height: 278px;
+    object-fit: cover;
+    margin: 5px;
 }
 
-.carrousel .images img.active {
+.carrousel #buttons {
+    margin-top: 10px;
+}
+
+.carrousel .prev, .carrousel .next {
+    background-color: #6ab446;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carrousel .prev:hover, .carrousel .next:hover {
+    background-color: #56732c;
+}
+
+.carrousel .active {
     display: block;
 }
 
-#buttons {
-    position: absolute;
+.property-details {
+    margin-left: 0px;
+    text-align: left;
+}
+
+footer.page-footer {
+    background-color: #222;
+    color: #ccc;
+    padding: 30px 0;
+}
+
+footer.page-footer a {
+    color: white;
+}
+
+footer.page-footer a:hover {
+    text-decoration: none;
+}
+
+footer.page-footer .map-container {
+    position: relative;
+    height: 200px;
     width: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: space-between;
 }
 
-#buttons button {
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
+#achat-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 130px;
+    height: 40px;
+    background-color: red;
     color: white;
-    padding: 10px 20px;
-    cursor: pointer;
+    border: none;
+    border-radius: 10px;
     font-size: 16px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-#buttons button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.rounded-button {
-    margin-left: 40px;
-    margin-top: 25px;
-    margin-right: 25px;
-    height: 50px;
-    width: 200px;
-    background-color: rgb(89, 125, 152);
-    color: white;
-    border: none;
-    border-radius: 10px; 
-    font-size: 16px; 
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
+    transition: transform 0.3s ease;
 }
 
-.rounded-button:hover {
-    background-color: rgb(58, 81, 99);
+#achat-button:hover {
+    transform: scale(1.1);
 }
