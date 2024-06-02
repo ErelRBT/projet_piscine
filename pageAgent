@@ -11,36 +11,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript">
-        $(document).ready(function() {
-            function initCarrousel(carrouselId) {
-                var $carrousel = $('#' + carrouselId);
-                var $images = $carrousel.find('.images img');
-                var currentIndex = 0;
-                var totalImages = $images.length;
-
-                function updateVisibility() {
-                    $images.removeClass('active').hide();
-                    $images.eq(currentIndex).addClass('active').fadeIn();
-                }
-
-                function nextImage() {
-                    currentIndex = (currentIndex + 1) % totalImages;
-                    updateVisibility();
-                }
-
-                function prevImage() {
-                    currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-                    updateVisibility();
-                }
-
-                $carrousel.find('.prev').click(prevImage);
-                $carrousel.find('.next').click(nextImage);
-
-                updateVisibility();
-            }
-
-            initCarrousel('carrousel1');
-        });
+       
     </script>
 </head>
 <body>
@@ -97,7 +68,9 @@
             <div class="button-group">
                 <a href="creneaux.html"><button class="rounded-button">Prendre un RDV</button></a>
                 <button class="rounded-button">Voir CV</button>
-                <button class="rounded-button">Contacter l'agent</button>
+                <a href="chat.php">
+                    <button class="rounded-button">Contacter l'agent</button>
+                </a>
             </div>
         </div>
     </header>
