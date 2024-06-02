@@ -137,3 +137,34 @@ footer.page-footer .map-container {
 #achat-button:hover {
     transform: scale(1.1);
 }
+
+#achat-button2 {
+    position: absolute;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+#achat-button2:hover {
+    transform: scale(1.1);
+}
+
+
+.rounded-button {
+    background-color: #6ab446; /* Fond vert */
+    color: white; /* Texte blanc */
+    border: none;
+    border-radius: 20px; /* Bords arrondis */
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.rounded-button:hover {
+    transform: scale(1.1);
+    background-color: #56732c; /* Couleur de fond au survol */
+}
